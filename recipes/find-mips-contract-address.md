@@ -1,4 +1,4 @@
-How to find the MIPS contract address:
+# How to find the MIPS contract address:
 
 To find the actual MIPS contract being used, navigate from SystemConfigProxy like this:
 1. SystemConfigProxy.disputeGameFactory gives the DisputeGameFactory address
