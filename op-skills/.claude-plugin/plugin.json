@@ -1,0 +1,11 @@
+{
+  "name": "op-skills",
+  "version": "1.0.0",
+  "description": "Skills for OP Stack blockchain operations including dispute game analysis, node health checks, and configuration retrieval",
+  "author": {
+    "name": "Paul Dowman"
+  },
+  "repository": "https://github.com/pauldowman/op-claude-plugins",
+  "keywords": ["optimism", "op-stack", "blockchain", "ethereum", "dispute-games", "node-operations"]
+}
+

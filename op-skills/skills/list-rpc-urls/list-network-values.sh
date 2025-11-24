@@ -1,14 +1,10 @@
 #!/bin/bash
 
 # Script to list all values for stack.optimism.io/network from the k8s repo
-# Usage: ./scripts/list_network_values.sh <path to k8s repo>
+# Usage: list-network-values.sh <path to k8s repo>
 
 set -euo pipefail
 
-# Function to print output
-print_header() {
-    echo "=== $1 ==="
-}
 
 print_info() {
     echo -e "$1"

@@ -1,0 +1,13 @@
+{
+  "name": "op-claude-plugins",
+  "owner": {
+    "name": "Paul Dowman"
+  },
+  "plugins": [
+    {
+      "name": "op-skills",
+      "source": "./op-skills",
+      "description": "Skills for OP Stack blockchain operations including dispute game analysis, node health checks, and configuration retrieval"
+    }
+  ]
+}

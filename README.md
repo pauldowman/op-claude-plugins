@@ -1,62 +1,59 @@
-# Cast MCP Server
+# OP Stack Skills
 
-An MCP (Model Context Protocol) server that provides tools for interacting with the Ethereum blockchain using Cast commands.
-
-## Features
-
-- **cast_call**: Call contract functions (read-only)
-- **cast_send**: Send transactions to contracts
+Claude Code skills for working with OP Stack blockchains.
 
 ## Prerequisites
 
-- Python 3.13+
-- [uv](https://docs.astral.sh/uv/) for Python dependency management
-- Foundry installed (`curl -L https://foundry.paradigm.xyz | bash`)
+- [Foundry](https://book.getfoundry.sh/getting-started/installation) (`cast` command)
+- [op-workbench](https://github.com/ethereum-optimism/op-workbench) for RPC URL lookups
 
 ## Installation
 
-This project uses uv for fast, modern Python dependency management. Dependencies are automatically managed - no manual virtual environment setup required.
-
-To install uv:
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Dependencies will be automatically installed when you run the server.
+# Run Claude Code
+claude
 
-## Usage
+# Add the marketplace
+/plugin marketplace add /path/to/op-claude-plugins
 
-This server is designed to be used with MCP-compatible clients. To use with the Claude app, add the following config to `claude_desktop_config.json`:
+# Install the plugin
+/plugin install op-skills@op-claude-plugins
 
-```json
-{
-  "mcpServers": {
-    "op-mcp-server": {
-      "command": "<PATH TO THIS REPO>/start.sh",
-      "args": ["k8s-repo-path=<PATH TO k8s REPO>", "op-workbench-repo-path=<PATH TO op-workbench REPO>"]
-    }
-  }
-}
-
-Use `logs.sh` to debug.
-
-## Development
-
-### Adding Dependencies
-```bash
-uv add package_name
+# Verify installation
+/plugin list
 ```
 
-### Running the Server
-```bash
-./start.sh
-```
+Restart Claude Code after installation. Test by asking: "Get the chain configuration for OP Mainnet"
 
+## Configuration
 
-## Tools Reference
+Some skills require configuration, such as paths to local repositories. **Claude will prompt you** for this information when needed:
 
-### cast_call
-Make read-only calls to contract functions.
+- **Repository paths**: Skills that query RPC URLs need paths to `op-workbench` and `k8s` repositories
+  - Claude will ask for these paths when you first use related skills
+  - You can also set environment variables: `$OP_WORKBENCH_PATH` and `$K8S_REPO_PATH`
+  
+- **Tool requirements**: Most skills use the `cast` command from Foundry
+  - If not installed, Claude will provide installation instructions
+  - Run the `check-op-stack-skill-setup` skill to verify your environment
 
-### cast_send
-Send transactions to contract functions with ETH value support.
+## Available Skills
+
+**Node Operations**
+- `check-op-node-safe-head-db` - Check if safe head database is enabled
+- `check-node-health` - Check health of op-geth, op-node, or L1 geth
+- `find-mips-contract-address` - Find MIPS contract address for dispute games
+
+**Dispute Games**
+- `list-recent-dispute-games` - List games from last 24 hours
+- `check-dispute-game-validity` - Verify root claim matches actual output
+- `get-dispute-game-details` - Get dispute game contract details
+- `verify-dispute-game-absolute-prestate` - Verify prestate matches standards
+
+**Configuration**
+- `get-chain-config` - Get chain config from Superchain Registry
+- `get-contract-abi` - Get ABIs for Optimism contracts
+- `get-specs-documentation` - Fetch Optimism specs docs
+- `get-prestates` - Get standard prestates config
+- `get-dispute-game-constants` - Get dispute game type constants

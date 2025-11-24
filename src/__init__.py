@@ -1,1 +1,0 @@
-# MCP Server for Forge/Foundry commands
