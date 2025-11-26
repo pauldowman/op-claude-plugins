@@ -1,7 +1,7 @@
 ---
 name: check-op-stack-skill-setup
 description: Verify that required tools and repository paths are configured correctly for OP Stack skills
-allowed-tools: Bash(cast:*, curl:*, ls:*)
+allowed-tools: Bash(cast:*), Bash(curl:*), Bash(ls:*), Bash(echo:*)
 ---
 
 ## What to Check

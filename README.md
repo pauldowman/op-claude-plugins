@@ -24,11 +24,11 @@ claude
 /plugin list
 ```
 
-Restart Claude Code after installation. Test by asking: "Get the chain configuration for OP Mainnet"
+Restart Claude Code after installation. Test by asking: "Check the OP Stack skill setup".
 
 ## Configuration
 
-Some skills require configuration, such as paths to local repositories. **Claude will prompt you** for this information when needed:
+Some skills require configuration, such as paths to local repositories. Claude will prompt you for this information when needed, but you can also set env vars:
 
 - **Repository paths**: Skills that query RPC URLs need paths to `op-workbench` and `k8s` repositories
   - Claude will ask for these paths when you first use related skills
