@@ -1,7 +1,7 @@
 ---
 name: get-chain-config
 description: Get configuration for an OP Stack chain from the Optimism Superchain Registry
-allowed-tools: Bash(curl:*)
+allowed-tools: WebFetch(domain:raw.githubusercontent.com)
 ---
 
 1. Determine L1_CHAIN, which will be `mainnet` or `sepolia`

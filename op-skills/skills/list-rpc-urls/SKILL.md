@@ -1,7 +1,7 @@
 ---
 name: list-rpc-urls
 description: Get RPC URLs for the op-geth or op-node for an OP Stack chain, or for Ethereum or Sepolia
-allowed-tools: Bash(./list-network-values.sh:*), Bash(./list-l1-rpc-urls.sh:*), Bash(./list-l2-rpc-urls.sh:*)
+allowed-tools: Bash(skills/list-rpc-urls/list-network-values.sh:*), Bash(skills/list-rpc-urls/list-l1-rpc-urls.sh:*), Bash(skills/list-rpc-urls/list-l2-rpc-urls.sh:*)
 ---
 
 # List RPC URLs
@@ -37,7 +37,7 @@ This skill requires paths to local repositories. Claude should prompt the user f
 Before querying L2 RPC URLs, use this to discover valid k8s network labels:
 
 ```bash
-./list-network-values.sh <k8s_repo_path>
+skills/list-rpc-urls/list-network-values.sh <k8s_repo_path>
 ```
 
 **Output**: Lists all available network labels categorized by environment type (dev, prod, other).
@@ -64,7 +64,7 @@ Production environments:
 Get RPC URLs for Ethereum mainnet or Sepolia nodes:
 
 ```bash
-./list-l1-rpc-urls.sh <network> <node_type> <op_workbench_repo_path>
+skills/list-rpc-urls/list-l1-rpc-urls.sh <network> <node_type> <op_workbench_repo_path>
 ```
 
 **Parameters**:
@@ -75,10 +75,10 @@ Get RPC URLs for Ethereum mainnet or Sepolia nodes:
 **Examples**:
 ```bash
 # Get Ethereum mainnet geth URLs
-./list-l1-rpc-urls.sh mainnet geth /path/to/op-workbench
+skills/list-rpc-urls/list-l1-rpc-urls.sh mainnet geth /path/to/op-workbench
 
 # Get Sepolia lighthouse/consensus URLs
-./list-l1-rpc-urls.sh sepolia lighthouse /path/to/op-workbench
+skills/list-rpc-urls/list-l1-rpc-urls.sh sepolia lighthouse /path/to/op-workbench
 ```
 
 ### 3. Get L2 RPC URLs

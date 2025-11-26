@@ -1,7 +1,7 @@
 ---
 name: get-contracts-version-and-upgrade-number
 description: Get the op-contracts version number and the upgrade number for an OP Stack chain
-allowed-tools: Bash(cast:*, curl:*)
+allowed-tools: WebFetch(domain:raw.githubusercontent.com), Bash(cast:*)
 ---
 
 1. Get the L1 node RPC URL using the `get-rpc-urls` skill.
