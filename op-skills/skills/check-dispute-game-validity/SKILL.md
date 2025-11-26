@@ -4,10 +4,6 @@ description: Check if a dispute game's root claim matches the actual output root
 allowed-tools: Bash(cast:*)
 ---
 
-# Check Dispute Game Validity
-
-Check if a dispute game's root claim matches the actual output root.
-
 ## Prerequisites
 
 This skill requires the `cast` command from Foundry. If not available, Claude should suggest running the `check-op-stack-skill-setup` skill or provide installation instructions.

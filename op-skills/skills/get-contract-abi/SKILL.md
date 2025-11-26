@@ -1,6 +1,7 @@
 ---
 name: get-contract-abi
 description: Get the ABI for Optimism contracts from the contracts-bedrock snapshots
+allowed-tools: Bash(curl:*)
 ---
 
 # Get Contract ABI

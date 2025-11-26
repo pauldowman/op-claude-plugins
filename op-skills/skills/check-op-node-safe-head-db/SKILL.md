@@ -4,10 +4,6 @@ description: Check whether the safe head database is enabled in an op-node insta
 allowed-tools: Bash(cast:*)
 ---
 
-# Check if Safe Head DB is Enabled in OP Node
-
-Check whether the safe head database is enabled in an op-node instance.
-
 ## Prerequisites
 
 This skill requires the `cast` command from Foundry. If not available, Claude should suggest running the `check-op-stack-skill-setup` skill or provide installation instructions.

@@ -1,7 +1,7 @@
 ---
 name: verify-dispute-game-absolute-prestate
 description: Verify that a dispute game's absolute prestate matches standard prestates
-allowed-tools: Bash(cast:*), Bash(grep:*)
+allowed-tools: Bash(cast:*, grep:*)
 ---
 
 # Verify Dispute Game Absolute Prestate

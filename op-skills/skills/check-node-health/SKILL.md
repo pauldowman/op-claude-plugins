@@ -4,10 +4,6 @@ description: Check the health of op-geth, op-node, or L1 geth nodes
 allowed-tools: Bash(cast:*)
 ---
 
-# Check Node Health
-
-Check the health of op-geth, op-node, or L1 geth nodes.
-
 ## Prerequisites
 
 This skill requires the `cast` command from Foundry. If `cast` is not available, Claude should:

@@ -1,6 +1,7 @@
 ---
 name: get-dispute-game-constants
 description: Fetch dispute game constants from Optimism's Types.sol file
+allowed-tools: Bash(curl:*)
 ---
 
 # Get Dispute Game Constants

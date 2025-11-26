@@ -1,6 +1,7 @@
 ---
 name: get-specs-documentation
 description: Fetch documentation pages from the Optimism specs repository
+allowed-tools: Bash(curl:*)
 ---
 
 # Get Specs Documentation

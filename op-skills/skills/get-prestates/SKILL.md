@@ -1,6 +1,7 @@
 ---
 name: get-prestates
 description: Fetch standard prestates configuration from the Optimism Superchain Registry
+allowed-tools: Bash(curl:*)
 ---
 
 # Get Standard Prestates
