@@ -17,8 +17,9 @@ This skill requires the `cast` command from Foundry. If not available, Claude sh
 Navigate from SystemConfigProxy to find the MIPS contract:
 
 1. Use the `list-rpc-urls` skill to find the RPC URL to use.
-2. Get DisputeGameFactory address: `cast call <SYSTEM_CONFIG_PROXY> "disputeGameFactory()" --rpc-url <RPC_URL>`
-3. Get FaultDisputeGame address: `cast call <DISPUTE_GAME_FACTORY> "gameImpls(uint32)" 0 --rpc-url <RPC_URL>`
-4. Get MIPS contract address: `cast call <FAULT_DISPUTE_GAME> "vm()" --rpc-url <RPC_URL>`
+2. Get the SystemConfigProxy using the `get-chain-config` skill.
+3. Get DisputeGameFactory address: `cast call <SYSTEM_CONFIG_PROXY> "disputeGameFactory()" --rpc-url <RPC_URL>`
+4. Get FaultDisputeGame address: `cast call <DISPUTE_GAME_FACTORY> "gameImpls(uint32)" 0 --rpc-url <RPC_URL>`
+5. Get MIPS contract address: `cast call <FAULT_DISPUTE_GAME> "vm()" --rpc-url <RPC_URL>`
 
-For PermissionedDisputeGame, use the same process but call `gameImpls(1)` instead of `gameImpls(0)` in step 2.
+For PermissionedDisputeGame, use the same process but call `gameImpls(1)` instead of `gameImpls(0)` in step 4.
