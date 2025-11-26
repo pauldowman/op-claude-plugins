@@ -1,22 +1,20 @@
 ---
 name: get-specs-documentation
 description: Fetch documentation pages from the Optimism specs repository
-allowed-tools: Bash(./get-specs-page.sh:*)
 ---
 
 # Get Specs Documentation
 
-Fetch documentation pages from the Optimism specs repository.
+Fetch documentation pages from the Optimism specs repository by fetching URLs directly.
 
-## Usage
+## Instructions
 
-```bash
-./get-specs-page.sh [page]
+Fetch the documentation page from:
+```
+https://raw.githubusercontent.com/ethereum-optimism/specs/refs/heads/main/specs/{page}
 ```
 
-## Parameters
-
-- `page`: Page path (e.g., protocol/deposits.md, fault-proof/index.md). Defaults to SUMMARY.md (table of contents).
+Where `{page}` is the page path (e.g., `protocol/deposits.md`, `fault-proof/index.md`). If no page is specified, use `SUMMARY.md` (table of contents).
 
 ## Output
 

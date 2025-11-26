@@ -1,22 +1,19 @@
 ---
 name: get-dispute-game-constants
 description: Fetch dispute game constants from Optimism's Types.sol file
-allowed-tools: Bash(./get-dispute-game-constants.sh:*)
 ---
 
 # Get Dispute Game Constants
 
-Fetch dispute game constants from Optimism's Types.sol file.
+Fetch dispute game constants from Optimism's Types.sol file by fetching the URL directly.
 
-## Usage
+## Instructions
 
-```bash
-./get-dispute-game-constants.sh [tag]
-```
+Fetch the Types.sol file from:
+- For a specific tag: `https://raw.githubusercontent.com/ethereum-optimism/optimism/refs/tags/{tag}/packages/contracts-bedrock/src/dispute/lib/Types.sol`
+- For develop branch: `https://raw.githubusercontent.com/ethereum-optimism/optimism/refs/heads/develop/packages/contracts-bedrock/src/dispute/lib/Types.sol`
 
-## Parameters
-
-- `tag`: Optional git tag (e.g., op-contracts/v4.0.0-rc.8). Defaults to develop branch.
+Where `{tag}` is a git tag (e.g., `op-contracts/v4.0.0-rc.8`). If no tag is specified, use the develop branch.
 
 ## Output
 
