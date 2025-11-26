@@ -40,20 +40,4 @@ Some skills require configuration, such as paths to local repositories. **Claude
 
 ## Available Skills
 
-**Node Operations**
-- `check-op-node-safe-head-db` - Check if safe head database is enabled
-- `check-node-health` - Check health of op-geth, op-node, or L1 geth
-- `find-mips-contract-address` - Find MIPS contract address for dispute games
-
-**Dispute Games**
-- `list-recent-dispute-games` - List games from last 24 hours
-- `check-dispute-game-validity` - Verify root claim matches actual output
-- `get-dispute-game-details` - Get dispute game contract details
-- `verify-dispute-game-absolute-prestate` - Verify prestate matches standards
-
-**Configuration**
-- `get-chain-config` - Get chain config from Superchain Registry
-- `get-contract-abi` - Get ABIs for Optimism contracts
-- `get-specs-documentation` - Fetch Optimism specs docs
-- `get-prestates` - Get standard prestates config
-- `get-dispute-game-constants` - Get dispute game type constants
+See the [skills](./tree/main/op-skills/skills) directory for a list of the available skills.
