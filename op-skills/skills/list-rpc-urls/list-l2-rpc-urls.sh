@@ -37,6 +37,11 @@ if echo "$TAILSCALE_STATUS" | grep -q "Tailscale is stopped"; then
     exit 1
 fi
 
+if ! gcloud auth application-default print-access-token &>/dev/null; then
+    echo "Error: gcloud is not logged in. Please run 'gcloud auth application-default login' to authenticate." >&2
+    exit 1
+fi
+
 # Change to op-workbench directory and run the command
 cd "$OP_WORKBENCH_PATH"
 

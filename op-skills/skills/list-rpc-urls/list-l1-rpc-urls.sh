@@ -1,9 +1,6 @@
 #!/bin/bash
 
 # Script to list RPC URLs for a specific Ethereum L1 network using op-workbench
-# Usage: list-l1-rpc-urls.sh <network> <node_type> <op_workbench_repo_path>
-# Example: list-l1-rpc-urls.sh mainnet geth /path/to/op-workbench
-# Example: list-l1-rpc-urls.sh sepolia lighthouse /path/to/op-workbench
 
 set -euo pipefail
 
@@ -37,6 +34,11 @@ TAILSCALE_STATUS=$(tailscale status 2>&1) || {
 
 if echo "$TAILSCALE_STATUS" | grep -q "Tailscale is stopped"; then
     echo "Error: Tailscale is stopped. Please start Tailscale to access RPC URLs." >&2
+    exit 1
+fi
+
+if ! gcloud auth application-default print-access-token &>/dev/null; then
+    echo "Error: gcloud is not logged in. Please run 'gcloud auth application-default login' to authenticate." >&2
     exit 1
 fi
 

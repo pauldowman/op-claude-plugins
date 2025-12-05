@@ -81,6 +81,8 @@ skills/list-rpc-urls/list-l1-rpc-urls.sh mainnet geth /path/to/op-workbench
 skills/list-rpc-urls/list-l1-rpc-urls.sh sepolia lighthouse /path/to/op-workbench
 ```
 
+In the case of error don't guess or use known public RPCs. Pause, tell the user what the error was and wait for them to resolve it.
+
 ### 3. Get L2 RPC URLs
 
 Get RPC URLs for OP Stack L2 chain nodes:
@@ -102,6 +104,8 @@ Get RPC URLs for OP Stack L2 chain nodes:
 # Get op-geth URLs for Base Sepolia development
 ./list-l2-rpc-urls.sh base-sepolia-dev op-geth /path/to/op-workbench
 ```
+
+In the case of error don't guess or use known public RPCs. Pause, tell the user what the error was and wait for them to resolve it.
 
 ## Workflow
 
