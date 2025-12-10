@@ -1,11 +1,11 @@
 # OP Stack Skills
 
-Claude Code skills for working with OP Stack blockchains.
+Claude Code skills for working with OP Stack blockchains. Currently assumes access to Optimism internal infrastructure to find RPC URLs.
 
 ## Prerequisites
 
 - [Foundry](https://book.getfoundry.sh/getting-started/installation) (`cast` command)
-- [op-workbench](https://github.com/ethereum-optimism/op-workbench) for RPC URL lookups
+- Optimism internal repos for RPC URL lookups: `op-workbench` and `k8s`.
 
 ## Installation
 
