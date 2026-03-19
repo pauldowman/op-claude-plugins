@@ -21,22 +21,6 @@ if [ ! -d "$OP_WORKBENCH_PATH" ]; then
     exit 1
 fi
 
-# Check if tailscale is available and running
-if ! command -v tailscale &> /dev/null; then
-    echo "Error: tailscale command not found. Please install Tailscale (or install the Tailscale CLI from the Tailscale app settings dialog)." >&2
-    exit 1
-fi
-
-TAILSCALE_STATUS=$(tailscale status 2>&1) || {
-    echo "Error: Tailscale needs to be running to access RPC URLs." >&2
-    exit 1
-}
-
-if echo "$TAILSCALE_STATUS" | grep -q "Tailscale is stopped"; then
-    echo "Error: Tailscale is stopped. Please start Tailscale to access RPC URLs." >&2
-    exit 1
-fi
-
 if ! gcloud auth application-default print-access-token &>/dev/null; then
     echo "Error: gcloud is not logged in. Please run 'gcloud auth application-default login' to authenticate." >&2
     exit 1
